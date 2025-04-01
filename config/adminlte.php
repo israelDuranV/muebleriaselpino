@@ -329,6 +329,16 @@ return [
         ],
         ['header' => 'Configuración'],
         [
+            'text' => 'usuarios',
+            'route' => 'admin.users.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'roles',
+            'route' => 'admin.roles.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'profile',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
@@ -347,32 +357,12 @@ return [
                     'route' => 'admin.bancos.index',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Terminados',
+                    'route' => 'admin.terminados.index',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'Departamentos',
+                    'route' => 'admin.departamentos.index',
                 ],
             ],
         ],

@@ -3,11 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-	<h1>Listado de bancos</h1>
+	<h1>Listado de departamentos</h1>
 @stop
 
 @section('content')
-<a class="btn btn-secondary btn-sm mb-1" href="{{route('admin.bancos.create')}}">Agregar Banco</a>
+<a class="btn btn-secondary btn-sm mb-1" href="{{route('admin.departamentos.create')}}">Agregar departamento</a>
 @if (session('info'))
 <div class="alert alert-success mt-1">
 	<strong>
@@ -15,7 +15,7 @@
 	</strong>
 </div>
 @endif
-@livewire("admin.bancos-index")
+@livewire("admin.departamentos-index")
 @stop
 
 @section('css')
