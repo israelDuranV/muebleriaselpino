@@ -17,8 +17,12 @@ class UserSeeder extends Seeder
             'name'=>"israel duran velasco",
             'email'=>"israel_duran@outlook.com",
             'password'=>bcrypt('sanguisetcinis')
-        ]);
-        
-    //->assignRole(['Admin']);User::factory(99)->create();
+        ])->assignRole(['Admin']);
+        User::create([
+            'name'=>"axayacatl duran velasco",
+            'email'=>"darkyletter@gmail.com",
+            'password'=>bcrypt('sanguisetcinis')
+        ])->assignRole(['Vendedor']);
+    //User::factory(99)->create();
     }
 }

@@ -21,6 +21,7 @@
 			</a>
 		@endcan
 		<div class="card-body">
+			@if($roles->count())
 			<table class="table table-stri">
 				<thead>
 					<tr>
@@ -53,6 +54,12 @@
 				</tbody>
 			</table>
 		</div>
+		@else
+		<strong>
+				No hay roles que mostrar
+		</strong>
+		
+		@endif
 	</div>
 @stop
 
