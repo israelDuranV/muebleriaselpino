@@ -6,11 +6,14 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BancoController;
 use App\Http\Controllers\Admin\TerminadoController;
 use App\Http\Controllers\Admin\DepartamentoController;
-
+use App\Http\Controllers\Admin\EstudioController;
 
 Route::get('/admin',[HomeController::class,'index'])
 //->middleware('can:admin.home')
 ->name('admin.home');
+Route::resource('estudios', EstudioController::class)
+//->except("show")
+->names('admin.estudios');
 Route::resource('bancos', BancoController::class)
 //->except("show")
 ->names('admin.bancos');

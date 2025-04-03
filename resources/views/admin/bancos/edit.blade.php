@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-	<h1>Editar Banco</h1>
+	<h1>Editar banco</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
 		<div class="card-body">
 			{!! Form::model($banco, ['route'=>['admin.bancos.update',$banco], 'method'=>'put']) !!}
 			@include("admin.bancos.partials.form")
-			{!! Form::submit("Editar Banco",["class"=>"btn btn-primary"]) !!}
+			{!! Form::submit("Editar Estudio",["class"=>"btn btn-primary"]) !!}
 			{!! Form::close()!!}
 		</div>
 	</div>

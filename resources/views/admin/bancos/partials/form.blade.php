@@ -10,6 +10,6 @@
     @enderror
 </div>
 <div class="form-group">
-    {!! Form::label('descripcion', 'Descripción') !!}
-    {!! Form::text('descripcion', null,["class"=>"form-control", "placeholder"=>"Ingrese la descripcion del banco"]) !!}
+    {!! Form::label('description', 'Descripción') !!}
+    {!! Form::text('description', null,["class"=>"form-control", "placeholder"=>"Ingrese la descripcion del banco"]) !!}
 </div>

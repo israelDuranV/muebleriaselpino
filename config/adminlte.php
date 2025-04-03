@@ -357,13 +357,18 @@ return [
                     'route' => 'admin.bancos.index',
                 ],
                 [
-                    'text' => 'Terminados',
-                    'route' => 'admin.terminados.index',
+                    'text' => 'Niveles de Estudios',
+                    'route' => 'admin.estudios.index',
                 ],
                 [
                     'text' => 'Departamentos',
                     'route' => 'admin.departamentos.index',
                 ],
+                [
+                    'text' => 'Terminados',
+                    'route' => 'admin.terminados.index',
+                ],
+
             ],
         ],
         ['header' => 'labels'],
