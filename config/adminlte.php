@@ -134,11 +134,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -263,7 +263,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => "user/profile",
     'disable_darkmode_routes' => false,
 
     /*
@@ -311,81 +311,75 @@ return [
         ],
 
         // Sidebar items:
+
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Home',
+            'url' => 'admin',
+            'icon' => 'fas fa-fw fa-chess-knight',
         ],
         [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
+            'text' => 'Carrito',
+            'route' => 'admin.carts.index',
+            'icon' => 'fas fa-fw fa-cart-plus',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'Configuración'],
-        [
-            'text' => 'usuarios',
-            'route' => 'admin.users.index',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'roles',
-            'route' => 'admin.roles.index',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Configuración',
+            'icon' => 'fas fa-fw fa-wrench',
+            'submenu' => [
+                        [
+                            'text' => 'usuarios',
+                            'route' => 'admin.users.index',
+                            'icon' => 'fas fa-fw fa-user',
+                        ],
+                        [
+                            'text' => 'roles',
+                            'route' => 'admin.roles.index',
+                            'icon' => 'fas fa-fw fa-id-badge',
+                        ],
+                        [
+                            'text' => 'profile',
+                            'url' => 'user/profile',
+                            'icon' => 'fas fa-fw fa-address-card',
+                        ],
+                        [
+                            'text' => 'change_password',
+                            'url' => 'admin/settings',
+                            'icon' => 'fas fa-fw fa-lock',
+                        ]
+                ]
         ],
         [
             'text' => 'Catálogos',
-            'icon' => 'fas fa-fw fa-share',
+            'icon' => 'fa fa-fw fa-object-ungroup',
             'submenu' => [
                 [
                     'text' => 'Bancos',
                     'route' => 'admin.bancos.index',
-                ],
-                [
-                    'text' => 'Niveles de Estudios',
-                    'route' => 'admin.estudios.index',
+                    'icon'=>'fa fa-piggy-bank'
                 ],
                 [
                     'text' => 'Departamentos',
                     'route' => 'admin.departamentos.index',
+                    'icon'=>'fa fa-layer-group'
                 ],
+                [
+                    'text' => 'Materiales',
+                    'route' => 'admin.materiales.index',
+                    'icon'=>'fa fa-graduation-cap'
+                ],
+                [
+                    'text' => 'Niveles de Estudios',
+                    'route' => 'admin.estudios.index',
+                    'icon'=>'fa fa-graduation-cap'
+                ],
+
                 [
                     'text' => 'Terminados',
                     'route' => 'admin.terminados.index',
+                    'icon'=>'fa fa-brush'
                 ],
 
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
-        ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
         ],
     ],
 

@@ -28,6 +28,7 @@ return new class extends Migration
             $table->date('fecha_alta')->nullable();
             $table->date('fecha_nacimiento')->nullable();
             $table->string('mueblerias')->nullable();
+            $table->string('descripcion')->nullable();
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();

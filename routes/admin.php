@@ -1,16 +1,24 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BancoController;
+use App\Http\Controllers\Admin\MaterialeController;
+use App\Http\Controllers\Admin\EstudioController;
 use App\Http\Controllers\Admin\TerminadoController;
 use App\Http\Controllers\Admin\DepartamentoController;
-use App\Http\Controllers\Admin\EstudioController;
 
 Route::get('/admin',[HomeController::class,'index'])
 //->middleware('can:admin.home')
 ->name('admin.home');
+Route::resource('carts', CartController::class)
+//->except("show")
+->names('admin.carts');
+Route::resource('materiales', MaterialeController::class)
+//->except("show")
+->names('admin.materiales');
 Route::resource('estudios', EstudioController::class)
 //->except("show")
 ->names('admin.estudios');

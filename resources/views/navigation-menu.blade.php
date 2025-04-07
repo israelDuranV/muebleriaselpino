@@ -97,7 +97,9 @@
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
                             </div>
-
+                            <x-dropdown-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
+                                Intranet
+                               </x-dropdown-link>
                             <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
@@ -161,6 +163,9 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
+                <x-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
+                 Intranet
+                </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>

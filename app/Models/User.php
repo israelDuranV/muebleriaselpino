@@ -29,6 +29,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'telefono',
+        'sueldo',
+        'nss',
+        'curp',
+        'cartilla',
+        'licencia',
+        'rfc',
+        'estudios',
+        'fecha_alta',
+        'fecha_nacimiento',
+        'mueblerias',
+        'profile_photo_path'
     ];
 
     /**
@@ -60,7 +72,18 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-    public function posts(){
-      return $this->hasMany(Post::class);  
+    public function adminlte_image()
+    {
+        return 'https://picsum.photos/300/300';
+    }
+    
+    public function adminlte_desc()
+    {
+        return $this->descripcion;
+    }
+
+    public function adminlte_profile_url()
+    {
+        return $this->profile_photo_path;
     }
 }
